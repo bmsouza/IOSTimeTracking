@@ -14,6 +14,12 @@
 		4A7CDC311B1B5EB90097F595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC301B1B5EB90097F595 /* Images.xcassets */; };
 		4A7CDC341B1B5EB90097F595 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC321B1B5EB90097F595 /* LaunchScreen.xib */; };
 		4A7CDC401B1B5EB90097F595 /* IosTimeTrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC3F1B1B5EB90097F595 /* IosTimeTrackingTests.m */; };
+		4A7CDC4B1B1B5F6B0097F595 /* URLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */; };
+		4A7CDC4D1B1B5FC90097F595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */; };
+		4A7CDC521B1B60BA0097F595 /* TimeTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC511B1B60BA0097F595 /* TimeTracking.m */; };
+		4A7CDC551B1B83930097F595 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */; };
+		4A7CDC571B1B97930097F595 /* cietLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC561B1B97930097F595 /* cietLogo.png */; };
+		4A7CDC591B1B98280097F595 /* colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC581B1B98280097F595 /* colors.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +46,14 @@
 		4A7CDC391B1B5EB90097F595 /* IosTimeTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosTimeTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7CDC3E1B1B5EB90097F595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7CDC3F1B1B5EB90097F595 /* IosTimeTrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosTimeTrackingTests.m; sourceTree = "<group>"; };
+		4A7CDC491B1B5F440097F595 /* URLConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConnection.h; sourceTree = "<group>"; };
+		4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URLConnection.m; sourceTree = "<group>"; };
+		4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4A7CDC501B1B60BA0097F595 /* TimeTracking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeTracking.h; sourceTree = "<group>"; };
+		4A7CDC511B1B60BA0097F595 /* TimeTracking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeTracking.m; sourceTree = "<group>"; };
+		4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		4A7CDC561B1B97930097F595 /* cietLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cietLogo.png; sourceTree = "<group>"; };
+		4A7CDC581B1B98280097F595 /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7CDC551B1B83930097F595 /* JavaScriptCore.framework in Frameworks */,
+				4A7CDC4D1B1B5FC90097F595 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +79,8 @@
 		4A7CDC171B1B5EB90097F595 = {
 			isa = PBXGroup;
 			children = (
+				4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */,
+				4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */,
 				4A7CDC221B1B5EB90097F595 /* IosTimeTracking */,
 				4A7CDC3C1B1B5EB90097F595 /* IosTimeTrackingTests */,
 				4A7CDC211B1B5EB90097F595 /* Products */,
@@ -89,6 +107,10 @@
 				4A7CDC301B1B5EB90097F595 /* Images.xcassets */,
 				4A7CDC321B1B5EB90097F595 /* LaunchScreen.xib */,
 				4A7CDC231B1B5EB90097F595 /* Supporting Files */,
+				4A7CDC491B1B5F440097F595 /* URLConnection.h */,
+				4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */,
+				4A7CDC501B1B60BA0097F595 /* TimeTracking.h */,
+				4A7CDC511B1B60BA0097F595 /* TimeTracking.m */,
 			);
 			path = IosTimeTracking;
 			sourceTree = "<group>";
@@ -96,6 +118,8 @@
 		4A7CDC231B1B5EB90097F595 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				4A7CDC561B1B97930097F595 /* cietLogo.png */,
+				4A7CDC581B1B98280097F595 /* colors.png */,
 				4A7CDC241B1B5EB90097F595 /* Info.plist */,
 				4A7CDC251B1B5EB90097F595 /* main.m */,
 			);
@@ -122,9 +146,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A7CDC1F1B1B5EB90097F595 /* IosTimeTracking */ = {
+		4A7CDC1F1B1B5EB90097F595 /* TimeTracking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "IosTimeTracking" */;
+			buildConfigurationList = 4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "TimeTracking" */;
 			buildPhases = (
 				4A7CDC1C1B1B5EB90097F595 /* Sources */,
 				4A7CDC1D1B1B5EB90097F595 /* Frameworks */,
@@ -134,7 +158,7 @@
 			);
 			dependencies = (
 			);
-			name = IosTimeTracking;
+			name = TimeTracking;
 			productName = IosTimeTracking;
 			productReference = 4A7CDC201B1B5EB90097F595 /* IosTimeTracking.app */;
 			productType = "com.apple.product-type.application";
@@ -168,6 +192,7 @@
 				TargetAttributes = {
 					4A7CDC1F1B1B5EB90097F595 = {
 						CreatedOnToolsVersion = 6.1;
+						DevelopmentTeam = C2PZXK26KP;
 					};
 					4A7CDC381B1B5EB90097F595 = {
 						CreatedOnToolsVersion = 6.1;
@@ -188,7 +213,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A7CDC1F1B1B5EB90097F595 /* IosTimeTracking */,
+				4A7CDC1F1B1B5EB90097F595 /* TimeTracking */,
 				4A7CDC381B1B5EB90097F595 /* IosTimeTrackingTests */,
 			);
 		};
@@ -199,7 +224,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4A7CDC591B1B98280097F595 /* colors.png in Resources */,
 				4A7CDC2F1B1B5EB90097F595 /* Main.storyboard in Resources */,
+				4A7CDC571B1B97930097F595 /* cietLogo.png in Resources */,
 				4A7CDC341B1B5EB90097F595 /* LaunchScreen.xib in Resources */,
 				4A7CDC311B1B5EB90097F595 /* Images.xcassets in Resources */,
 			);
@@ -220,6 +247,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4A7CDC2C1B1B5EB90097F595 /* ViewController.m in Sources */,
+				4A7CDC4B1B1B5F6B0097F595 /* URLConnection.m in Sources */,
+				4A7CDC521B1B60BA0097F595 /* TimeTracking.m in Sources */,
 				4A7CDC291B1B5EB90097F595 /* AppDelegate.m in Sources */,
 				4A7CDC261B1B5EB90097F595 /* main.m in Sources */,
 			);
@@ -238,7 +267,7 @@
 /* Begin PBXTargetDependency section */
 		4A7CDC3B1B1B5EB90097F595 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4A7CDC1F1B1B5EB90097F595 /* IosTimeTracking */;
+			target = 4A7CDC1F1B1B5EB90097F595 /* TimeTracking */;
 			targetProxy = 4A7CDC3A1B1B5EB90097F595 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -343,9 +372,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IosTimeTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -353,9 +385,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = IosTimeTracking/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -405,13 +440,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "IosTimeTracking" */ = {
+		4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "TimeTracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A7CDC441B1B5EB90097F595 /* Debug */,
 				4A7CDC451B1B5EB90097F595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4A7CDC461B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "IosTimeTrackingTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +456,7 @@
 				4A7CDC481B1B5EB90097F595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
