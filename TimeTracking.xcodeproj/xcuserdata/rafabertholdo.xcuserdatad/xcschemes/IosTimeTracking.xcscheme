@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A58C5D01B1BBA9500E19496"
-            BuildableName = "TimeTracking copy.app"
+            BuildableName = "TimeTracking.app"
             BlueprintName = "TimeTracking"
-            ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+            ReferencedContainer = "container:TimeTracking.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -77,9 +77,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4A58C5D01B1BBA9500E19496"
-            BuildableName = "TimeTracking copy.app"
+            BuildableName = "TimeTracking.app"
             BlueprintName = "TimeTracking"
-            ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+            ReferencedContainer = "container:TimeTracking.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
