@@ -7,33 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4A7CDC261B1B5EB90097F595 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC251B1B5EB90097F595 /* main.m */; };
-		4A7CDC291B1B5EB90097F595 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC281B1B5EB90097F595 /* AppDelegate.m */; };
-		4A7CDC2C1B1B5EB90097F595 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC2B1B1B5EB90097F595 /* ViewController.m */; };
-		4A7CDC2F1B1B5EB90097F595 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC2D1B1B5EB90097F595 /* Main.storyboard */; };
-		4A7CDC311B1B5EB90097F595 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC301B1B5EB90097F595 /* Images.xcassets */; };
-		4A7CDC341B1B5EB90097F595 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC321B1B5EB90097F595 /* LaunchScreen.xib */; };
-		4A7CDC401B1B5EB90097F595 /* IosTimeTrackingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC3F1B1B5EB90097F595 /* IosTimeTrackingTests.m */; };
-		4A7CDC4B1B1B5F6B0097F595 /* URLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */; };
-		4A7CDC4D1B1B5FC90097F595 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */; };
-		4A7CDC521B1B60BA0097F595 /* TimeTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC511B1B60BA0097F595 /* TimeTracking.m */; };
-		4A7CDC551B1B83930097F595 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */; };
-		4A7CDC571B1B97930097F595 /* cietLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC561B1B97930097F595 /* cietLogo.png */; };
-		4A7CDC591B1B98280097F595 /* colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC581B1B98280097F595 /* colors.png */; };
+		4A58C5D21B1BBA9500E19496 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC2B1B1B5EB90097F595 /* ViewController.m */; };
+		4A58C5D31B1BBA9500E19496 /* URLConnection.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */; };
+		4A58C5D41B1BBA9500E19496 /* TimeTracking.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC511B1B60BA0097F595 /* TimeTracking.m */; };
+		4A58C5D51B1BBA9500E19496 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC281B1B5EB90097F595 /* AppDelegate.m */; };
+		4A58C5D61B1BBA9500E19496 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A7CDC251B1B5EB90097F595 /* main.m */; };
+		4A58C5D81B1BBA9500E19496 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */; };
+		4A58C5D91B1BBA9500E19496 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */; };
+		4A58C5DB1B1BBA9500E19496 /* colors.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC581B1B98280097F595 /* colors.png */; };
+		4A58C5DC1B1BBA9500E19496 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC2D1B1B5EB90097F595 /* Main.storyboard */; };
+		4A58C5DD1B1BBA9500E19496 /* cietLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC561B1B97930097F595 /* cietLogo.png */; };
+		4A58C5DE1B1BBA9500E19496 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC321B1B5EB90097F595 /* LaunchScreen.xib */; };
+		4A58C5DF1B1BBA9500E19496 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4A7CDC301B1B5EB90097F595 /* Images.xcassets */; };
+		4A58C5E61B1BBB1B00E19496 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A58C5E51B1BBB1B00E19496 /* CoreLocation.framework */; };
+		4A58C5E81B1BBF1600E19496 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 4A58C5E71B1BBF1600E19496 /* Settings.bundle */; };
+		4AC653FD1B1BD51600216245 /* HGBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AC653FC1B1BD51600216245 /* HGBeacon.m */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		4A7CDC3A1B1B5EB90097F595 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 4A7CDC181B1B5EB90097F595 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4A7CDC1F1B1B5EB90097F595;
-			remoteInfo = IosTimeTracking;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		4A7CDC201B1B5EB90097F595 /* IosTimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IosTimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimeTracking copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A58C5E41B1BBA9500E19496 /* TimeTracking copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeTracking copy-Info.plist"; path = "/Volumes/RafaMac/Users/rafabertholdo/Documents/IOSTimeTracking/TimeTracking copy-Info.plist"; sourceTree = "<absolute>"; };
+		4A58C5E51B1BBB1B00E19496 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		4A58C5E71B1BBF1600E19496 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4A7CDC241B1B5EB90097F595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7CDC251B1B5EB90097F595 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4A7CDC271B1B5EB90097F595 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -43,7 +38,6 @@
 		4A7CDC2E1B1B5EB90097F595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4A7CDC301B1B5EB90097F595 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4A7CDC331B1B5EB90097F595 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		4A7CDC391B1B5EB90097F595 /* IosTimeTrackingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IosTimeTrackingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A7CDC3E1B1B5EB90097F595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4A7CDC3F1B1B5EB90097F595 /* IosTimeTrackingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = IosTimeTrackingTests.m; sourceTree = "<group>"; };
 		4A7CDC491B1B5F440097F595 /* URLConnection.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = URLConnection.h; sourceTree = "<group>"; };
@@ -54,22 +48,18 @@
 		4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		4A7CDC561B1B97930097F595 /* cietLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cietLogo.png; sourceTree = "<group>"; };
 		4A7CDC581B1B98280097F595 /* colors.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = colors.png; sourceTree = "<group>"; };
+		4AC653FB1B1BD51600216245 /* HGBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HGBeacon.h; sourceTree = "<group>"; };
+		4AC653FC1B1BD51600216245 /* HGBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HGBeacon.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4A7CDC1D1B1B5EB90097F595 /* Frameworks */ = {
+		4A58C5D71B1BBA9500E19496 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7CDC551B1B83930097F595 /* JavaScriptCore.framework in Frameworks */,
-				4A7CDC4D1B1B5FC90097F595 /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A7CDC361B1B5EB90097F595 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4A58C5E61B1BBB1B00E19496 /* CoreLocation.framework in Frameworks */,
+				4A58C5D81B1BBA9500E19496 /* JavaScriptCore.framework in Frameworks */,
+				4A58C5D91B1BBA9500E19496 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,19 +69,21 @@
 		4A7CDC171B1B5EB90097F595 = {
 			isa = PBXGroup;
 			children = (
+				4A58C5E71B1BBF1600E19496 /* Settings.bundle */,
+				4A58C5E51B1BBB1B00E19496 /* CoreLocation.framework */,
 				4A7CDC541B1B83930097F595 /* JavaScriptCore.framework */,
 				4A7CDC4C1B1B5FC90097F595 /* UIKit.framework */,
 				4A7CDC221B1B5EB90097F595 /* IosTimeTracking */,
 				4A7CDC3C1B1B5EB90097F595 /* IosTimeTrackingTests */,
 				4A7CDC211B1B5EB90097F595 /* Products */,
+				4A58C5E41B1BBA9500E19496 /* TimeTracking copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		4A7CDC211B1B5EB90097F595 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A7CDC201B1B5EB90097F595 /* IosTimeTracking.app */,
-				4A7CDC391B1B5EB90097F595 /* IosTimeTrackingTests.xctest */,
+				4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -111,6 +103,8 @@
 				4A7CDC4A1B1B5F6B0097F595 /* URLConnection.m */,
 				4A7CDC501B1B60BA0097F595 /* TimeTracking.h */,
 				4A7CDC511B1B60BA0097F595 /* TimeTracking.m */,
+				4AC653FB1B1BD51600216245 /* HGBeacon.h */,
+				4AC653FC1B1BD51600216245 /* HGBeacon.m */,
 			);
 			path = IosTimeTracking;
 			sourceTree = "<group>";
@@ -146,13 +140,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4A7CDC1F1B1B5EB90097F595 /* TimeTracking */ = {
+		4A58C5D01B1BBA9500E19496 /* TimeTracking */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "TimeTracking" */;
+			buildConfigurationList = 4A58C5E01B1BBA9500E19496 /* Build configuration list for PBXNativeTarget "TimeTracking" */;
 			buildPhases = (
-				4A7CDC1C1B1B5EB90097F595 /* Sources */,
-				4A7CDC1D1B1B5EB90097F595 /* Frameworks */,
-				4A7CDC1E1B1B5EB90097F595 /* Resources */,
+				4A58C5D11B1BBA9500E19496 /* Sources */,
+				4A58C5D71B1BBA9500E19496 /* Frameworks */,
+				4A58C5DA1B1BBA9500E19496 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -160,26 +154,8 @@
 			);
 			name = TimeTracking;
 			productName = IosTimeTracking;
-			productReference = 4A7CDC201B1B5EB90097F595 /* IosTimeTracking.app */;
+			productReference = 4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */;
 			productType = "com.apple.product-type.application";
-		};
-		4A7CDC381B1B5EB90097F595 /* IosTimeTrackingTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4A7CDC461B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "IosTimeTrackingTests" */;
-			buildPhases = (
-				4A7CDC351B1B5EB90097F595 /* Sources */,
-				4A7CDC361B1B5EB90097F595 /* Frameworks */,
-				4A7CDC371B1B5EB90097F595 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4A7CDC3B1B1B5EB90097F595 /* PBXTargetDependency */,
-			);
-			name = IosTimeTrackingTests;
-			productName = IosTimeTrackingTests;
-			productReference = 4A7CDC391B1B5EB90097F595 /* IosTimeTrackingTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -189,16 +165,6 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Rafael Bertholdo";
-				TargetAttributes = {
-					4A7CDC1F1B1B5EB90097F595 = {
-						CreatedOnToolsVersion = 6.1;
-						DevelopmentTeam = C2PZXK26KP;
-					};
-					4A7CDC381B1B5EB90097F595 = {
-						CreatedOnToolsVersion = 6.1;
-						TestTargetID = 4A7CDC1F1B1B5EB90097F595;
-					};
-				};
 			};
 			buildConfigurationList = 4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "IosTimeTracking" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -213,64 +179,42 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4A7CDC1F1B1B5EB90097F595 /* TimeTracking */,
-				4A7CDC381B1B5EB90097F595 /* IosTimeTrackingTests */,
+				4A58C5D01B1BBA9500E19496 /* TimeTracking */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		4A7CDC1E1B1B5EB90097F595 /* Resources */ = {
+		4A58C5DA1B1BBA9500E19496 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7CDC591B1B98280097F595 /* colors.png in Resources */,
-				4A7CDC2F1B1B5EB90097F595 /* Main.storyboard in Resources */,
-				4A7CDC571B1B97930097F595 /* cietLogo.png in Resources */,
-				4A7CDC341B1B5EB90097F595 /* LaunchScreen.xib in Resources */,
-				4A7CDC311B1B5EB90097F595 /* Images.xcassets in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A7CDC371B1B5EB90097F595 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				4A58C5DB1B1BBA9500E19496 /* colors.png in Resources */,
+				4A58C5DC1B1BBA9500E19496 /* Main.storyboard in Resources */,
+				4A58C5DD1B1BBA9500E19496 /* cietLogo.png in Resources */,
+				4A58C5DE1B1BBA9500E19496 /* LaunchScreen.xib in Resources */,
+				4A58C5E81B1BBF1600E19496 /* Settings.bundle in Resources */,
+				4A58C5DF1B1BBA9500E19496 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		4A7CDC1C1B1B5EB90097F595 /* Sources */ = {
+		4A58C5D11B1BBA9500E19496 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4A7CDC2C1B1B5EB90097F595 /* ViewController.m in Sources */,
-				4A7CDC4B1B1B5F6B0097F595 /* URLConnection.m in Sources */,
-				4A7CDC521B1B60BA0097F595 /* TimeTracking.m in Sources */,
-				4A7CDC291B1B5EB90097F595 /* AppDelegate.m in Sources */,
-				4A7CDC261B1B5EB90097F595 /* main.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4A7CDC351B1B5EB90097F595 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				4A7CDC401B1B5EB90097F595 /* IosTimeTrackingTests.m in Sources */,
+				4AC653FD1B1BD51600216245 /* HGBeacon.m in Sources */,
+				4A58C5D21B1BBA9500E19496 /* ViewController.m in Sources */,
+				4A58C5D31B1BBA9500E19496 /* URLConnection.m in Sources */,
+				4A58C5D41B1BBA9500E19496 /* TimeTracking.m in Sources */,
+				4A58C5D51B1BBA9500E19496 /* AppDelegate.m in Sources */,
+				4A58C5D61B1BBA9500E19496 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		4A7CDC3B1B1B5EB90097F595 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4A7CDC1F1B1B5EB90097F595 /* TimeTracking */;
-			targetProxy = 4A7CDC3A1B1B5EB90097F595 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4A7CDC2D1B1B5EB90097F595 /* Main.storyboard */ = {
@@ -292,6 +236,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		4A58C5E11B1BBA9500E19496 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "TimeTracking copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "TimeTracking copy";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4A58C5E21B1BBA9500E19496 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = "TimeTracking copy-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "TimeTracking copy";
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
 		4A7CDC411B1B5EB90097F595 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -368,92 +340,23 @@
 			};
 			name = Release;
 		};
-		4A7CDC441B1B5EB90097F595 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = IosTimeTracking/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Debug;
-		};
-		4A7CDC451B1B5EB90097F595 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_FILE = IosTimeTracking/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = 1;
-			};
-			name = Release;
-		};
-		4A7CDC471B1B5EB90097F595 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IosTimeTrackingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosTimeTracking.app/IosTimeTracking";
-			};
-			name = Debug;
-		};
-		4A7CDC481B1B5EB90097F595 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
-				INFOPLIST_FILE = IosTimeTrackingTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IosTimeTracking.app/IosTimeTracking";
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		4A58C5E01B1BBA9500E19496 /* Build configuration list for PBXNativeTarget "TimeTracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4A58C5E11B1BBA9500E19496 /* Debug */,
+				4A58C5E21B1BBA9500E19496 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "IosTimeTracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A7CDC411B1B5EB90097F595 /* Debug */,
 				4A7CDC421B1B5EB90097F595 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4A7CDC431B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "TimeTracking" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A7CDC441B1B5EB90097F595 /* Debug */,
-				4A7CDC451B1B5EB90097F595 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4A7CDC461B1B5EB90097F595 /* Build configuration list for PBXNativeTarget "IosTimeTrackingTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4A7CDC471B1B5EB90097F595 /* Debug */,
-				4A7CDC481B1B5EB90097F595 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

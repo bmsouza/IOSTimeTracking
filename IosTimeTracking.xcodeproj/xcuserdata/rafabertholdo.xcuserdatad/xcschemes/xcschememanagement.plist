@@ -9,9 +9,19 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TimeTracking copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4A58C5D01B1BBA9500E19496</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4A7CDC1F1B1B5EB90097F595</key>
 		<dict>
 			<key>primary</key>
