@@ -9,15 +9,40 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>TimeTracking copy copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>TimeTracking copy.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>4A58C5D01B1BBA9500E19496</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>4A7CDC1F1B1B5EB90097F595</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>4A7CDC381B1B5EB90097F595</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A9EC47F1B1BF30B0023D3CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A9EC4971B1BF3130023D3CF</key>
 		<dict>
 			<key>primary</key>
 			<true/>

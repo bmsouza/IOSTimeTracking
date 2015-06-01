@@ -14,24 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A7CDC1F1B1B5EB90097F595"
-               BuildableName = "TimeTracking.app"
-               BlueprintName = "TimeTracking"
-               ReferencedContainer = "container:IosTimeTracking.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A7CDC381B1B5EB90097F595"
-               BuildableName = "IosTimeTrackingTests.xctest"
-               BlueprintName = "IosTimeTrackingTests"
-               ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+               BlueprintIdentifier = "8A9EC47F1B1BF30B0023D3CF"
+               BuildableName = "TimeTracking copy.app"
+               BlueprintName = "TimeTracking copy"
+               ReferencedContainer = "container:TimeTracking.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -42,24 +28,14 @@
       shouldUseLaunchSchemeArgsEnv = "YES"
       buildConfiguration = "Debug">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4A7CDC381B1B5EB90097F595"
-               BuildableName = "IosTimeTrackingTests.xctest"
-               BlueprintName = "IosTimeTrackingTests"
-               ReferencedContainer = "container:IosTimeTracking.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A7CDC1F1B1B5EB90097F595"
-            BuildableName = "TimeTracking.app"
-            BlueprintName = "TimeTracking"
-            ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+            BlueprintIdentifier = "8A9EC47F1B1BF30B0023D3CF"
+            BuildableName = "TimeTracking copy.app"
+            BlueprintName = "TimeTracking copy"
+            ReferencedContainer = "container:TimeTracking.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,10 +52,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A7CDC1F1B1B5EB90097F595"
-            BuildableName = "TimeTracking.app"
-            BlueprintName = "TimeTracking"
-            ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+            BlueprintIdentifier = "8A9EC47F1B1BF30B0023D3CF"
+            BuildableName = "TimeTracking copy.app"
+            BlueprintName = "TimeTracking copy"
+            ReferencedContainer = "container:TimeTracking.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,10 +71,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4A7CDC1F1B1B5EB90097F595"
-            BuildableName = "TimeTracking.app"
-            BlueprintName = "TimeTracking"
-            ReferencedContainer = "container:IosTimeTracking.xcodeproj">
+            BlueprintIdentifier = "8A9EC47F1B1BF30B0023D3CF"
+            BuildableName = "TimeTracking copy.app"
+            BlueprintName = "TimeTracking copy"
+            ReferencedContainer = "container:TimeTracking.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

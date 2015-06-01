@@ -25,8 +25,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TimeTracking copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4A58C5E41B1BBA9500E19496 /* TimeTracking copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "TimeTracking copy-Info.plist"; path = "/Volumes/RafaMac/Users/rafabertholdo/Documents/IOSTimeTracking/TimeTracking copy-Info.plist"; sourceTree = "<absolute>"; };
+		4A58C5E31B1BBA9500E19496 /* TimeTracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimeTracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4A58C5E51B1BBB1B00E19496 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		4A58C5E71B1BBF1600E19496 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		4A7CDC241B1B5EB90097F595 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,14 +75,13 @@
 				4A7CDC221B1B5EB90097F595 /* IosTimeTracking */,
 				4A7CDC3C1B1B5EB90097F595 /* IosTimeTrackingTests */,
 				4A7CDC211B1B5EB90097F595 /* Products */,
-				4A58C5E41B1BBA9500E19496 /* TimeTracking copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		4A7CDC211B1B5EB90097F595 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */,
+				4A58C5E31B1BBA9500E19496 /* TimeTracking.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -154,7 +152,7 @@
 			);
 			name = TimeTracking;
 			productName = IosTimeTracking;
-			productReference = 4A58C5E31B1BBA9500E19496 /* TimeTracking copy.app */;
+			productReference = 4A58C5E31B1BBA9500E19496 /* TimeTracking.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,8 +163,18 @@
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Rafael Bertholdo";
+				TargetAttributes = {
+					4A58C5D01B1BBA9500E19496 = {
+						DevelopmentTeam = C2PZXK26KP;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
-			buildConfigurationList = 4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "IosTimeTracking" */;
+			buildConfigurationList = 4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "TimeTracking" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -241,11 +249,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "TimeTracking copy-Info.plist";
+				INFOPLIST_FILE = IosTimeTracking/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "TimeTracking copy";
+				PRODUCT_NAME = TimeTracking;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -255,11 +263,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				INFOPLIST_FILE = "TimeTracking copy-Info.plist";
+				INFOPLIST_FILE = IosTimeTracking/info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "TimeTracking copy";
+				PRODUCT_NAME = TimeTracking;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
@@ -352,7 +360,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "IosTimeTracking" */ = {
+		4A7CDC1B1B1B5EB90097F595 /* Build configuration list for PBXProject "TimeTracking" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4A7CDC411B1B5EB90097F595 /* Debug */,

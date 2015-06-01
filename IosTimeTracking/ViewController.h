@@ -8,6 +8,11 @@
 
 #import <UIKit/UIKit.h>
 #import <CoreLocation/CoreLocation.h>
+#ifdef __IPHONE_8_0
+#define GregorianCalendar NSCalendarIdentifierGregorian
+#else
+#define GregorianCalendar NSGregorianCalendar
+#endif
 
 @interface ViewController : UIViewController  <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
