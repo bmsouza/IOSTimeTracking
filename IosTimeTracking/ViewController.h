@@ -16,8 +16,10 @@
 
 @interface ViewController : UIViewController  <CLLocationManagerDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *txtUserName;
+@property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UITextField *txtPassword;
 @property (weak, nonatomic) IBOutlet UILabel *lblDate;
 
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @end
 

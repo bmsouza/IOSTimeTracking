@@ -12,7 +12,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 @import CoreLocation;
 
-@interface ViewController () <CBCentralManagerDelegate,CLLocationManagerDelegate>
+@interface ViewController () <CBCentralManagerDelegate,CLLocationManagerDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) TimeTracking* timeTracking;
 @property (nonatomic, strong) NSDate* date;
 @property (nonatomic, strong) NSTimer*  timer;
@@ -23,7 +23,7 @@
 @property (nonatomic,strong) CBCentralManager *_manager;
 @property (nonatomic,strong) CBPeripheral *_peripheral;
 @property (nonatomic,strong) NSUUID* currentUUID;
-
+@property (nonatomic) CGPoint scrollOffset;
 @end
 
 @implementation ViewController
@@ -34,9 +34,21 @@
 @synthesize _manager;
 @synthesize _peripheral;
 @synthesize currentUUID;
+@synthesize scrollView;
+@synthesize scrollOffset;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    scrollOffset = scrollView.contentOffset;
+    self.txtPassword.delegate = self;
+    self.txtUserName.delegate = self;
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc]
+                                   initWithTarget:self
+                                   action:@selector(dismissKeyboard)];
+    
+    [self.view addGestureRecognizer:tap];
+    
     self.format = [[NSDateFormatter alloc] init];
     [self.format setDateFormat:@"dd/MM/yyyy HH:mm:ss"];
     
@@ -57,6 +69,11 @@
     [self initRegion];
 }
 
+-(void)dismissKeyboard {
+    [self.txtPassword resignFirstResponder];
+    [self.txtUserName resignFirstResponder];
+
+}
 
 #pragma mark - interface posiiton
 
@@ -81,7 +98,15 @@
         timer =  [NSTimer scheduledTimerWithTimeInterval:1.0f target:self selector:@selector(onTimer:) userInfo:nil repeats:TRUE];
         [self lblDate].text = [format stringFromDate:date];
     }];
+    [self registerForKeyboardNotifications];
+}
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [self deregisterFromKeyboardNotifications];
+    
+    [super viewWillDisappear:animated];
+    
 }
 
 
@@ -196,6 +221,63 @@
         }
     }
     //[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
+}
+
+
+- (void)registerForKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
+
+- (void)deregisterFromKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    
+    NSDictionary* info = [notification userInfo];
+    
+    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    CGPoint buttonOrigin = self.signInButton.frame.origin;
+    
+    CGFloat buttonHeight = self.signInButton.frame.size.height;
+    
+    CGRect visibleRect = self.view.frame;
+    
+    visibleRect.size.height -= keyboardSize.height;
+    
+    if (!CGRectContainsPoint(visibleRect, buttonOrigin)){
+        
+        CGPoint scrollPoint = CGPointMake(0.0, buttonOrigin.y - visibleRect.size.height + buttonHeight);
+        
+        [self.scrollView setContentOffset:scrollPoint animated:YES];
+        
+    }
+    
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification {
+    
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
+    
 }
 
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
