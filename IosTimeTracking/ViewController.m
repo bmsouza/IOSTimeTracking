@@ -12,7 +12,7 @@
 #import <CoreBluetooth/CoreBluetooth.h>
 @import CoreLocation;
 
-@interface ViewController () <CBCentralManagerDelegate,CLLocationManagerDelegate,UITextFieldDelegate>
+@interface ViewController () <CLLocationManagerDelegate,UITextFieldDelegate>
 @property (nonatomic, strong) TimeTracking* timeTracking;
 @property (nonatomic, strong) NSDate* date;
 @property (nonatomic, strong) NSTimer*  timer;
@@ -37,6 +37,7 @@
 @synthesize scrollView;
 @synthesize scrollOffset;
 
+#pragma mark - interface pipeline
 - (void)viewDidLoad {
     [super viewDidLoad];
     scrollOffset = scrollView.contentOffset;
@@ -55,8 +56,6 @@
     self.locationManager = [[CLLocationManager alloc] init];
     self.locationManager.delegate = self;
     if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
-        //[self.locationManager requestWhenInUseAuthorization];
-        //[self requestAlwaysAuthorization];
         [self.locationManager requestAlwaysAuthorization];
     }
     //[self.locationManager startUpdatingLocation];
@@ -66,30 +65,12 @@
     
     self.txtUserName.text = [prefs stringForKey:@"username"];
     self.txtPassword.text = [prefs stringForKey:@"password"];
-    [self initRegion];
+    [self startScanning];
 }
 
--(void)dismissKeyboard {
-    [self.txtPassword resignFirstResponder];
-    [self.txtUserName resignFirstResponder];
-
-}
-
-#pragma mark - interface posiiton
-
-- (NSUInteger) application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
-{
-    return UIInterfaceOrientationMaskPortrait;
-}
-
-- (BOOL) shouldAutorotate {
-    return NO;
-}
-
-- (IBAction)btnScanBeaconClicked:(id)sender {
-    //_manager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-    [[UIApplication sharedApplication] openURL:settingsURL];
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 -(void)viewWillAppear:(BOOL)animated{
@@ -99,6 +80,7 @@
         [self lblDate].text = [format stringFromDate:date];
     }];
     [self registerForKeyboardNotifications];
+    [super viewWillAppear:animated];
 }
 
 - (void)viewWillDisappear:(BOOL)animated {
@@ -109,6 +91,97 @@
     
 }
 
+#pragma mark - interface posiiton
+-(void)dismissKeyboard {
+    [self.txtPassword resignFirstResponder];
+    [self.txtUserName resignFirstResponder];
+    
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
+    [self.txtPassword resignFirstResponder];
+    [self.txtUserName resignFirstResponder];
+}
+
+- (NSUInteger) application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(UIWindow *)window
+{
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL) shouldAutorotate {
+    return NO;
+}
+
+- (void)registerForKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWasShown:)
+                                                 name:UIKeyboardDidShowNotification
+                                               object:nil];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillBeHidden:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:nil];
+    
+}
+
+- (void)deregisterFromKeyboardNotifications {
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardDidHideNotification
+                                                  object:nil];
+    
+    [[NSNotificationCenter defaultCenter] removeObserver:self
+                                                    name:UIKeyboardWillHideNotification
+                                                  object:nil];
+    
+}
+
+- (void)keyboardWasShown:(NSNotification *)notification {
+    
+    NSDictionary* info = [notification userInfo];
+    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    CGPoint buttonOrigin = self.signInButton.frame.origin;
+    CGFloat buttonHeight = self.signInButton.frame.size.height;
+    CGRect visibleRect = self.view.frame;
+    visibleRect.size.height -= keyboardSize.height;
+    if (!CGRectContainsPoint(visibleRect, buttonOrigin)){
+        CGPoint scrollPoint = CGPointMake(0.0, buttonOrigin.y - visibleRect.size.height + buttonHeight);
+        [self.scrollView setContentOffset:scrollPoint animated:YES];
+    }
+}
+
+- (void)keyboardWillBeHidden:(NSNotification *)notification {
+    [self.scrollView setContentOffset:CGPointZero animated:YES];
+}
+
+
+#pragma mark - interface events
+- (IBAction)btnScanBeaconClicked:(id)sender {
+    NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+    [[UIApplication sharedApplication] openURL:settingsURL];
+}
+
+- (void)onTimer:(NSTimer *)timer {
+    self.date = [self.date dateByAddingTimeInterval:1];
+    [self lblDate].text = [format stringFromDate:self.date];
+}
+
+- (IBAction)btnCheckInOut:(id)sender {
+    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
+    
+    [prefs setObject:self.txtUserName.text forKey:@"username"];
+    [prefs setObject:self.txtPassword.text forKey:@"password"];
+    
+    [timeTracking checkInOutWithUserName:self.txtUserName.text andPassword:self.txtPassword.text callback:^(NSString *message) {
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Marcação" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil, nil];
+        [alert show];
+        
+    }];
+}
+
+#pragma mark - Settings
 
 -(NSDate*)getLastNotifiedDate
 {
@@ -146,7 +219,9 @@
     [standardUserDefaults setObject:value forKey:@"Identifier_preference"];
 }
 
--(void)initRegion
+#pragma mark - Ibeacon methods
+
+-(void)startScanning
 {
     NSString* beaconUUID = [self getBeaconUUID];
     NSString* beanconIdentifier = [self getBeaconIdentifier];
@@ -162,36 +237,6 @@
         [self.locationManager startMonitoringForRegion:self.beaconRegion];
     }
     
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
-    
-    [self.txtPassword resignFirstResponder];
-    [self.txtUserName resignFirstResponder];
-}
-
-- (void)onTimer:(NSTimer *)timer {
-    self.date = [self.date dateByAddingTimeInterval:1];
-    [self lblDate].text = [format stringFromDate:self.date];
-}
-
-- (IBAction)btnCheckInOut:(id)sender {
-    NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    
-    // saving an NSString
-    [prefs setObject:self.txtUserName.text forKey:@"username"];
-    [prefs setObject:self.txtPassword.text forKey:@"password"];
-    
-    [timeTracking checkInOutWithUserName:self.txtUserName.text andPassword:self.txtPassword.text callback:^(NSString *message) {
-        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Marcação" message:message delegate:self cancelButtonTitle:nil otherButtonTitles:@"Ok", nil, nil];
-        [alert show];
-        
-    }];    
 }
 
 -(void)locationManager:(CLLocationManager *)manager didEnterRegion:(CLRegion *)region
@@ -223,67 +268,10 @@
     //[self.locationManager startRangingBeaconsInRegion:self.beaconRegion];
 }
 
-
-- (void)registerForKeyboardNotifications {
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWasShown:)
-                                                 name:UIKeyboardDidShowNotification
-                                               object:nil];
-    
-    [[NSNotificationCenter defaultCenter] addObserver:self
-                                             selector:@selector(keyboardWillBeHidden:)
-                                                 name:UIKeyboardWillHideNotification
-                                               object:nil];
-    
-}
-
-- (void)deregisterFromKeyboardNotifications {
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardDidHideNotification
-                                                  object:nil];
-    
-    [[NSNotificationCenter defaultCenter] removeObserver:self
-                                                    name:UIKeyboardWillHideNotification
-                                                  object:nil];
-    
-}
-
-- (void)keyboardWasShown:(NSNotification *)notification {
-    
-    NSDictionary* info = [notification userInfo];
-    
-    CGSize keyboardSize = [[info objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
-    
-    CGPoint buttonOrigin = self.signInButton.frame.origin;
-    
-    CGFloat buttonHeight = self.signInButton.frame.size.height;
-    
-    CGRect visibleRect = self.view.frame;
-    
-    visibleRect.size.height -= keyboardSize.height;
-    
-    if (!CGRectContainsPoint(visibleRect, buttonOrigin)){
-        
-        CGPoint scrollPoint = CGPointMake(0.0, buttonOrigin.y - visibleRect.size.height + buttonHeight);
-        
-        [self.scrollView setContentOffset:scrollPoint animated:YES];
-        
-    }
-    
-}
-
-- (void)keyboardWillBeHidden:(NSNotification *)notification {
-    
-    [self.scrollView setContentOffset:CGPointZero animated:YES];
-    
-}
-
 -(void)locationManager:(CLLocationManager *)manager didRangeBeacons:(NSArray *)beacons inRegion:(CLBeaconRegion *)region
 {
-    CLBeacon *beacon = [[CLBeacon alloc] init];
-    beacon = [beacons lastObject];
+//    CLBeacon *beacon = [[CLBeacon alloc] init];
+//    beacon = [beacons lastObject];
     
 }
 
